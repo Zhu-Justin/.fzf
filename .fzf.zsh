@@ -20,7 +20,7 @@ export FZF_DEFAULT_OPTS="
 --preview '([[ -f {} ]] && (bat --style=numbers --color=always {} || cat {})) || ([[ -d {} ]] && (tree -C {} | less)) || echo {} 2> /dev/null | head -200'
 --bind '?:toggle-preview'
 --bind 'ctrl-y:execute-silent(echo {+} | pbcopy)'
---bind 'ctrl-e:execute(echo {+} | xargs -o vim)'
+--bind 'ctrl-e:execute(echo {+} | xargs -o vi)'
 "
 
 # --layout=reverse
