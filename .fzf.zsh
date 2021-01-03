@@ -16,14 +16,14 @@ source "/usr/local/opt/fzf/shell/key-bindings.zsh"
 
 export FZF_DEFAULT_OPTS="
 --height=80%
+--multi
 --preview '([[ -f {} ]] && (bat --style=numbers --color=always {} || cat {})) || ([[ -d {} ]] && (tree -C {} | less)) || echo {} 2> /dev/null | head -200'
 --bind '?:toggle-preview'
 --bind 'ctrl-y:execute-silent(echo {+} | pbcopy)'
---bind 'ctrl-e:execute(echo {+} | xargs -o vi)'
+--bind 'ctrl-e:execute(echo {+} | xargs -o vim)'
 "
 
 # --layout=reverse
-# --multi
 # --info=inline
 # --height=80%
 # --multi
