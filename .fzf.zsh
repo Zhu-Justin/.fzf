@@ -14,6 +14,8 @@ source "/usr/local/opt/fzf/shell/key-bindings.zsh"
 
 # export FZF_DEFAULT_COMMAND="find --exclude={.git,.idea,.vscode,.sass-cache,node_modules,build} --type f"
 
+export FZF_DEFAULT_COMMAND="find"
+
 export FZF_DEFAULT_OPTS="
 --info=inline
 --height=80%
