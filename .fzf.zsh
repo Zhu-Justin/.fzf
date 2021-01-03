@@ -12,9 +12,6 @@ fi
 # ------------
 source "/usr/local/opt/fzf/shell/key-bindings.zsh"
 
-# export FZF_DEFAULT_COMMAND="find --exclude={.git,.idea,.vscode,.sass-cache,node_modules,build} --type f"
-
-# export FZF_DEFAULT_COMMAND="find ."
 
 export FZF_DEFAULT_OPTS="
 --info=inline
@@ -36,5 +33,8 @@ export FZF_DEFAULT_OPTS="
 
 # --bind 'ctrl-a:select-all'
 
+# FZF_DEFAULT_COMMAND="find --exclude={.git,.idea,.vscode,.sass-cache,node_modules,build} --type f"
+
+# FZF_DEFAULT_COMMAND="find ."
 # export FZF_COMPLETION_TRIGGER="**"
-# export FZF_DEFAULT_OPTS="--height 40% --layout=reverse --preview '(highlight -O ansi {} || cat {}) 2> /dev/null | head -500'"
+# FZF_DEFAULT_OPTS="--height 40% --layout=reverse --preview '(highlight -O ansi {} || cat {}) 2> /dev/null | head -500'"
