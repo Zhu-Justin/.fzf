@@ -15,10 +15,8 @@ source "/usr/local/opt/fzf/shell/key-bindings.zsh"
 export FZF_DEFAULT_COMMAND="fd --exclude={.git,.idea,.vscode,.sass-cache,node_modules,build} --type f"
 
 export FZF_DEFAULT_OPTS="
---info=inline
 --height=80%
 --multi
---preview-window=:hidden
 --preview '([[ -f {} ]] && (bat --style=numbers --color=always {} || cat {})) || ([[ -d {} ]] && (tree -C {} | less)) || echo {} 2> /dev/null | head -200'
 --bind '?:toggle-preview'
 --bind 'ctrl-y:execute-silent(echo {+} | pbcopy)'
