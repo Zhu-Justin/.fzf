@@ -14,12 +14,19 @@ source "/usr/local/opt/fzf/shell/key-bindings.zsh"
 
 
 export FZF_DEFAULT_OPTS="
+--multi
 --preview '([[ -f {} ]] && (bat --style=numbers --color=always {} || cat {})) || ([[ -d {} ]] && (tree -C {} | less)) || echo {} 2> /dev/null | head -200'
---color='hl:148,hl+:154,pointer:032,marker:010,bg+:237,gutter:008'
 --bind '?:toggle-preview'
 --bind 'ctrl-y:execute-silent(echo {+} | pbcopy)'
 --bind 'ctrl-e:execute(echo {+} | xargs -o vim)'
 "
+
+# --layout=reverse
+# --info=inline
+# --height=80%
+# --multi
+# --preview-window=:hidden
+# --color='hl:148,hl+:154,pointer:032,marker:010,bg+:237,gutter:008'
 
 # --bind 'ctrl-a:select-all'
 
