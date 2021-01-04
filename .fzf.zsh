@@ -14,7 +14,7 @@ source "/usr/local/opt/fzf/shell/key-bindings.zsh"
 
 # export FZF_DEFAULT_COMMAND="fd --exclude={.git,.idea,.vscode,.sass-cache,node_modules,build} --type f"
 
-export FZF_DEFAULT_COMMAND='find . -name .git -prune -o -name node_modules -prune -o -name coverage -prune -o -name tmp -prune -o -type f -print'
+export FZF_DEFAULT_COMMAND='find . -name .git -prune -o -name node_modules -prune -o -name coverage -prune -o -name tmp -prune -o -prune -o -name .* prune -type f -print'
 
 export FZF_DEFAULT_OPTS="
 --height=80%
