@@ -32,6 +32,7 @@ export FZF_DEFAULT_COMMAND="rg --files --sort accessed"
 export FZF_DEFAULT_OPTS="
 --height=80%
 --multi
+--layout=reverse
 --preview '([[ -f {} ]] && (bat --style=numbers --color=always {} || cat {})) || ([[ -d {} ]] && (tree -C {} | less)) || echo {} 2> /dev/null | head -200'
 --bind '?:toggle-preview'
 --bind 'ctrl-y:execute-silent(echo {+} | pbcopy)'
