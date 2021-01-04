@@ -17,6 +17,11 @@ export FZF_DEFAULT_COMMAND="find .
 -name node_modules -prune -o 
 -name coverage -prune -o 
 -name tmp -prune -o 
+-name Music -prune -o 
+-name Library -prune -o 
+-name Movies -prune -o 
+-name Downloads -prune -o 
+-name A -prune -o 
 -not -path '*/[.]*' 
 -type f -print"
 
