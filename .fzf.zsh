@@ -34,7 +34,7 @@ export FZF_DEFAULT_OPTS="
 --height=80%
 --multi
 --layout=reverse
---preview '([[ -f {} ]] && (bat --style=numbers --color=always {} || cat {})) || ([[ -d {} ]] && (tree -C {} | less)) || echo {} 2> /dev/null | head -200'
+--preview '([[ -f {} ]] && (cat {})) || ([[ -d {} ]] && (tree -C {} | less)) || echo {} 2> /dev/null | head -200'
 --bind '?:toggle-preview'
 --bind 'ctrl-y:execute-silent(echo {+} | pbcopy)'
 --bind 'ctrl-e:execute(echo {+} | xargs -o vim)'
@@ -46,6 +46,7 @@ export FZF_DEFAULT_OPTS="
 # --multi
 # --preview-window=:hidden
 # --color='hl:148,hl+:154,pointer:032,marker:010,bg+:237,gutter:008'
+# --preview '([[ -f {} ]] && (bat --style=numbers --color=always {} || cat {})) || ([[ -d {} ]] && (tree -C {} | less)) || echo {} 2> /dev/null | head -200'
 
 # --bind 'ctrl-a:select-all'
 
