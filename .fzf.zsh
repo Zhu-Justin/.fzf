@@ -12,6 +12,8 @@ fi
 # ------------
 source "/usr/local/opt/fzf/shell/key-bindings.zsh"
 
+export FZF_DEFAULT_COMMAND="rg --files --sortr modified"
+
 # export FZF_DEFAULT_COMMAND="find . 
 # -not -path '*/[@.]*'
 # -o -name .git -prune 
@@ -22,7 +24,6 @@ source "/usr/local/opt/fzf/shell/key-bindings.zsh"
 
 # export FZF_DEFAULT_COMMAND="find . -name .git -prune -o -name node_modules -prune -o -name coverage -prune -o -name tmp -prune -not -path '*/[@.]*' -type f -print"
 
-export FZF_DEFAULT_COMMAND="rg --files --sortr modified --ignore-file '*/Music/*"
 
 # export FZF_DEFAULT_COMMAND='rg --files --no-ignore-vcs --hidden'
 # export FZF_DEFAULT_COMMAND="fd --exclude={.git,.idea,.vscode,.sass-cache,node_modules,build,Downloads,Music,Movies,A} --type f"
