@@ -12,7 +12,7 @@ fi
 # ------------
 source "/usr/local/opt/fzf/shell/key-bindings.zsh"
 
-export FZF_DEFAULT_COMMAND="find . -name .git -prune -o -name node_modules -prune -o -name coverage -prune -o -name tmp -prune -o -type f -print"
+export FZF_DEFAULT_COMMAND="find . -name .git -prune -o -name node_modules -prune -o -name coverage -prune -o -name tmp -prune -o -not -path '*/[.]*' -type f -print"
 
 # FZF_DEFAULT_COMMAND="fd --exclude={.git,.idea,.vscode,.sass-cache,node_modules,build} --type f"
 #
