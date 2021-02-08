@@ -14,6 +14,7 @@ source "/usr/local/opt/fzf/shell/key-bindings.zsh"
 
 export FZF_DEFAULT_COMMAND="rg --files --sortr modified"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND="rg --sort-files --files --null 2> /dev/null | xargs -0 dirname | uniq"
 # export FZF_DEFAULT_COMMAND="find . 
 # -not -path '*/[@.]*'
 # -o -name .git -prune 
@@ -55,5 +56,4 @@ export FZF_DEFAULT_OPTS="
 # FZF_DEFAULT_COMMAND="find ."
 # export FZF_COMPLETION_TRIGGER="**"
 export FZF_COMPLETION_TRIGGER=""
-FZF_ALT_C_COMMAND="rg --sort-files --files --null 2> /dev/null | xargs -0 dirname | uniq".
 # FZF_DEFAULT_OPTS="--height 40% --layout=reverse --preview '(highlight -O ansi {} || cat {}) 2> /dev/null | head -500'"
