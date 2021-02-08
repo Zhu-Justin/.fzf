@@ -23,7 +23,7 @@ fi
 export FZF_DEFAULT_COMMAND="rg --files --sortr modified"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_CTRL_R_OPTS="--preview-window=:hidden"
-export FZF_ALT_C_COMMAND="rg --sort-files --files --null 2> /dev/null | xargs -0 "$dirname_command" | uniq"
+export FZF_ALT_C_COMMAND="rg --sort-files --files --hidden --null 2> /dev/null | xargs -0 "$dirname_command" | uniq"
 # export FZF_ALT_C_OPTS="--preview-window=:hidden"
 # # export FZF_DEFAULT_COMMAND="find . 
 # -not -path '*/[@.]*'
