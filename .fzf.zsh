@@ -64,6 +64,9 @@ _fzf_complete_doge() {
   _fzf_compgen_path() {
     rg --files --sortr modified
   }
+# _fzf_compgen_dir() {
+#     fd --type d . "$1"
+# }
 # fi
 # if ! declare -f _fzf_compgen_path > /dev/null; then
 #   _fzf_compgen_path() {
