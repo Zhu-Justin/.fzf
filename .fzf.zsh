@@ -65,7 +65,7 @@ _fzf_compgen_path() {
 	rg --files --sortr modified
 }
 _fzf_compgen_dir() {
-	rg --sort-files --files --null 2> /dev/null | xargs -0 "$dirname_command" | uniq
+	# rg --sort-files --files --null 2> /dev/null | xargs -0 "$dirname_command" | uniq
     # fd --type d . "$1"
 }
 # fi
