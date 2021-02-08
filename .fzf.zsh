@@ -48,7 +48,7 @@ export FZF_DEFAULT_OPTS="
 --preview '([[ -f {} ]] && (cat {})) || ([[ -d {} ]] && (tree -C {} | less)) || echo {} 2> /dev/null | head -200'
 --bind '?:toggle-preview'
 --bind 'ctrl-y:execute-silent(echo {+} | pbcopy)'
---bind 'ctrl-e:execute(echo {+} | xargs -o vim)'
+--bind 'ctrl-h:execute(echo {+} | xargs -o vim)'
 "
 
 # _fzf_complete_vi() {
