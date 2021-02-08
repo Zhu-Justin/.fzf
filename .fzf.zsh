@@ -51,9 +51,9 @@ export FZF_DEFAULT_OPTS="
 --bind 'ctrl-e:execute(echo {+} | xargs -o vim)'
 "
 
-_fzf_complete_vi() {
-  _fzf_complete
-}
+# _fzf_complete_vi() {
+#   _fzf_complete
+# }
 
 _fzf_complete_doge() {
   _fzf_complete --multi --reverse --prompt="doge> " -- "$@" < <(
