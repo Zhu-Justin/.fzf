@@ -15,7 +15,7 @@ source "/usr/local/opt/fzf/shell/key-bindings.zsh"
 export FZF_DEFAULT_COMMAND="rg --files --sortr modified"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_CTRL_R_OPTS="--preview-window=:hidden"
-# export FZF_ALT_C_COMMAND="rg --sort-files --files --null 2> /dev/null | xargs -0 dirname | uniq"
+export FZF_ALT_C_COMMAND="rg --files --null | xargs -0 dirname"
 # export FZF_DEFAULT_COMMAND="find . 
 # -not -path '*/[@.]*'
 # -o -name .git -prune 
@@ -51,6 +51,19 @@ _fzf_complete_doge() {
   )
 }
 
+# if ! declare -f _fzf_compgen_path > /dev/null; then
+  _fzf_compgen_path() {
+    rg --files --sortr modified
+  }
+# fi
+# if ! declare -f _fzf_compgen_path > /dev/null; then
+#   _fzf_compgen_path() {
+#     echo "$1"
+#     command find -L "$1" \
+#       -name .git -prune -o -name .hg -prune -o -name .svn -prune -o \( -type d -o -type f -o -type l \) \
+#       -a -not -path "$1" -print 2> /dev/null | sed 's@^\./@@'
+#   }
+# fi
 # --layout=reverse
 # --info=inline
 # --height=80%
