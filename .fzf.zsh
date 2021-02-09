@@ -97,3 +97,19 @@ _fzf_compgen_dir() {
 export FZF_COMPLETION_TRIGGER="**"
 # export FZF_COMPLETION_TRIGGER=""
 # FZF_DEFAULT_OPTS="--height 40% --layout=reverse --preview '(highlight -O ansi {} || cat {}) 2> /dev/null | head -500'"
+#
+#
+
+ # FORGIT_FZF_DEFAULT_OPTS="
+# --exact
+ # --border
+ # --cycle
+ # --reverse
+ # --height '80%'
+ # --bind 'ctrl-l:execute(echo {+} | xargs -o less)'
+ # "
+ 
+# --bind="ctrl-l:execute(echo {} |grep -Eo [a-f0-9]+ |head -1 |xargs git show |less -)"
+# export FORGIT_LOG_FZF_OPTS='
+# --bind="ctrl-l:execute(echo {}|head -1 |xargs git show - | less)"
+# '
