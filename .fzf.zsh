@@ -111,5 +111,5 @@ _fzf_compgen_dir() {
  
 # --bind="ctrl-l:execute(echo {} |grep -Eo [a-f0-9]+ |head -1 |xargs git show |less -)"
 # export FORGIT_LOG_FZF_OPTS='
-# --bind="ctrl-l:execute(echo {}|head -1 |xargs git show - | less)"
+# --bind="ctrl-l:execute($cmd | LESS='-r' less)"
 # '
